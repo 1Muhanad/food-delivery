@@ -1,10 +1,9 @@
 .header {
   height: 34vw;
-  margin: 30px auto;
+  margin: 100px auto;
   background: url("/header_img.png") no-repeat;
   background-size: contain;
   position: relative;
-  margin-top: 150px;
 }
 .header_content {
   position: absolute;
@@ -26,7 +25,7 @@
   color: white;
   font-size: 1vw;
 }
-.header_content button {
+.header_content a  {
   border: none;
   color: #474747;
   font-weight: 500;

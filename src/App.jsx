@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
@@ -9,6 +9,28 @@ import LoginPopup from "./components/LoginPopup/LoginPopup";
 const App = () => {
 
   const [showLogin,setShowLogin] = useState(false)
+
+
+ 
+  useEffect(() => {
+   if(showLogin) {
+    document.body.style.overflow = 'hidden'
+   }
+   else {
+    document.body.style.overflow = 'auto'
+  }
+  return () => {
+     document.body.style.overflow = 'auto'
+   }
+  } , [showLogin])
+
+  useEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null , "" , window.location.pathname)
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  } , [])
+
   return (
      <>
      {showLogin ? <LoginPopup setShowLogin={setShowLogin}/> : <></> }

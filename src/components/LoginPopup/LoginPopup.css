@@ -18,6 +18,8 @@
     border-radius: 8px;
     font-size: 14px;
     animation: fadeIn 0.5s;
+        margin-bottom: 200px;
+
 }
 .login-popup-title{
     display: flex;
