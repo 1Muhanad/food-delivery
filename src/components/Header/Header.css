@@ -4,6 +4,7 @@
   background: url("/header_img.png") no-repeat;
   background-size: contain;
   position: relative;
+  margin-top: 150px;
 }
 .header_content {
   position: absolute;
@@ -34,21 +35,19 @@
   font-size: max(1vw, 13px);
   border-radius: 50px;
 }
-@media (max-width:1050px) {
-
+@media (max-width: 1050px) {
   .header_content {
     max-width: 45%;
   }
 }
-@media (max-width:750px) {
-
+@media (max-width: 750px) {
   .header_content {
     max-width: 65%;
   }
-  .header_content p{
-   display: none;
-  } 
-  .header_content button{
-   padding: 2vw 4vw;
-  } 
+  .header_content p {
+    display: none;
+  }
+  .header_content button {
+    padding: 2vw 4vw;
+  }
 }
